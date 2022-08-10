@@ -16,9 +16,7 @@ ul {
 
 /* header */
 
-h2,
-h3,
-a {
+h2, h3, a {
 	color: #34495e;
 }
 
@@ -35,8 +33,7 @@ a {
 	margin-top: 5px;
 
 }
-.logo a,
-.main-nav a {
+.logo a, .main-nav a {
 	padding: 10px 15px;
 	text-transform: uppercase;
 	text-align: center;
@@ -86,4 +83,23 @@ a {
 		justify-content: space-between;
 	}
 
+}
+
+/* index */
+.hero {
+    height: 90vh;
+    width: 100vw;
+    background-image: url("hero-bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.hero-text {
+    margin-top: 15vh;
+    padding: 10px;
+    position: absolute;
+    background: rgba(217, 217, 217, 0.9);
+    border-radius: 0px 15px 15px 0px;
 }
