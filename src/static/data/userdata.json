@@ -1,0 +1,16 @@
+{
+    "username":"sandra90",
+    "realName": "Sandra Grace",
+    "relatives": [
+        {"realName": "Galia Grace",
+        "reminders": [
+            {"title":"Call Liz",
+            "desc": "Call Liz about Sonya's new movie",
+            "time": "9:00 AM"},
+            {"title":"Shopping",
+            "desc": "Get banana juice",
+            "time": "4:00 PM"}
+            ]
+        }
+    ]
+}

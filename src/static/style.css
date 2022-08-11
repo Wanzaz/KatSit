@@ -26,7 +26,7 @@ ul {
     list-style: none;
 }
 
-.header, .hero-text, .login form {
+.hero-text, .login form, .dashboard {
     background-color: var(--desmiddle-transparent);
 	-webkit-backdrop-filter:saturate(180%) blur(20px);
     backdrop-filter: saturate(180%) blur(20px);
@@ -92,6 +92,7 @@ a {
     width: 100%;
     margin: 0 auto;
     padding: .5em 35px .5em 25px;
+    background-color: var(--desmiddle);
 	-webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 	-moz-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -125,7 +126,9 @@ a {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	-moz-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 
@@ -173,7 +176,9 @@ a {
 }
 
 .login form {
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	-moz-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 15px;
     min-height: 400px;
     min-width: 500px;
@@ -186,7 +191,9 @@ a {
 }
 
 .login form input {
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	-moz-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border: none;
     font-size: 1.2em;
     width: 100%;
@@ -205,4 +212,24 @@ a {
 
 .login form input[type="submit"]:hover {
     background-color: #B5D1D6;
+}
+
+.dashboard {
+    margin-top: 200px;
+    padding: 20px;
+    height: 700px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.reminder {
+    border-radius: 15px;
+    background-color: var(--desmiddle-transparent);
+    padding: 20px;
+    margin: 10px;
+    width: 70%;
+    max-width: 700px;
 }

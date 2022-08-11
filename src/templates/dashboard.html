@@ -3,13 +3,21 @@
 <header class="header">
     <h1 class="logo"><a href="/"><img src="static/KatSitLogo.png"></a></h1>
     <ul class="main-nav">
-        <li><h1 class="logo"><a href="/logout">Log out</a></h1></li>
+        <li><h1 class="logo"><a href="/logout">Logout</a></h1></li>
     </ul>
 </header>
 {% endblock %}
 {% block content %}
-<div class="login">
-    <p>You are logged in as {{ form_data['username'][0] }}.</p>
+<div class="dashboard">
+    <h1>Welcome back, {{ form_data['username'][0] }}.</h1>
+    <div><h2>{{ user_data['relatives'][0]['realName'] }}'s reminders</h2></div>
+    {% for reminder in user_data['relatives'][0]['reminders'] %}
+        <div class="reminder">
+            <h3>{{ reminder['title'] }}</h3>
+            <p>{{ reminder['desc'] }}</p>
+            <p>{{ reminder['time'] }}</p>
+        </div>
+    {% endfor %}
 </div>
 <!-- {% for key,value in form_data.items() %}
 <h2> {{key}}</h2>
