@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Monda&display=swap');
 
+:root {
+    --deslight: #DBE9EE;
+    --desmiddle: #C0D6DF;
+    --desmiddle-transparent: rgba(192, 214, 223, 0.5);
+    --desdark: #4F6D7A;
+    --text-hover: #2a2a2a;
+  }
+
 * {
 	box-sizing: border-box;
 }
@@ -9,13 +17,20 @@ body {
 	line-height: 1.6;
 	margin: 0;
 	min-height: 100vh;
+    background-color: var(--desdark);
 }
 
 ul {
     margin: 0;
     padding: 0;
     list-style: none;
-    }
+}
+
+.header, .hero-text, .login form {
+    background-color: var(--desmiddle-transparent);
+	-webkit-backdrop-filter:saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+}
 
 /* header */
 
@@ -61,10 +76,14 @@ a {
 .main-nav a {
 	color: #000000;
 	font-size: .99em;
+    transition: color 0.1s ease-in-out;
+    transition: text/ 0.1s ease-in-out;
+
 }
 
 .main-nav a:hover {
-	color: #414141;
+	color: var(--text-hover);
+    text-decoration: underline solid var(--text-hover) 3px;
 }
 
 .header {
@@ -72,14 +91,10 @@ a {
     align-items: center;
     width: 100%;
     margin: 0 auto;
-	padding-top: .5em;
-	padding-bottom: .5em;
-    background-color: rgba(217, 217, 217, 0.5);
+    padding: .5em 35px .5em 25px;
 	-webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 	-moz-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    -webkit-backdrop-filter:saturate(180%) blur(20px);
-    backdrop-filter: saturate(180%) blur(20px);
 }
 
 .header, .main-nav {
@@ -104,21 +119,21 @@ a {
 /* index */
 .hero {
     position: relative;
-    height: 90vh;
+    height: 100vh;
     width: 100vw;
     background-image: url("hero-bg.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
+
+
 
 .hero-text {
     margin-top: 15vh;
     padding: 25px;
     position: absolute;
-    background-color: rgba(217, 217, 217, 0.5);
-	-webkit-backdrop-filter:saturate(180%) blur(20px);
-    backdrop-filter: saturate(180%) blur(20px);
     border-radius: 0px 15px 15px 0px;
     width: 40%;
     min-width: 300px;
@@ -126,4 +141,68 @@ a {
 
 .hero-text p {
     text-align: right;
+}
+
+.content {
+    color: #FFFFFF;
+    width: 100%;
+    height: 700px;
+    padding: 50px 10px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.content h2 {
+    color: #FFFFFF;
+}
+
+.login {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+
+/* login */
+.login, .login form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.login form {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    min-height: 400px;
+    min-width: 500px;
+    padding: 25px;
+}
+
+.login form h2 {
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.login form input {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border: none;
+    font-size: 1.2em;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.login form input[type="submit"] {
+    width: 50%;
+    background-color: #DBE9EE;
+	text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color 0.1s ease-in-out;
+}
+
+.login form input[type="submit"]:hover {
+    background-color: #B5D1D6;
 }

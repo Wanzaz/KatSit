@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block header %}
+<header class="header">
+    <h1 class="logo"><a href="/"><img src="static/KatSitLogo.png"></a></h1>
+    <ul class="main-nav">
+        <li><h1 class="logo"><a href="/download">Download</a></h1></li>
+        <li><h1 class="logo"><a href="/login">Login</a></h1></li>
+    </ul>
+</header>
+{% endblock %}
+{% block content %}
+<div class="login">
+    <form action="/dashboard" method="POST">
+        <h2>Login to your KatSit account</h2>
+        <input type="text" name="username" placeholder="Username" required="required"/>
+        <input type="password" name="password" placeholder="Password" required="required"/>
+        <input type="submit" value="Login" required="required"/>
+        <a>Forgot password?</a>
+    </form>
+</div>
+{% endblock %}

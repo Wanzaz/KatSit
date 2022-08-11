@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block header %}
+<header class="header">
+    <h1 class="logo"><a href="/"><img src="static/KatSitLogo.png"></a></h1>
+    <ul class="main-nav">
+        <li><h1 class="logo"><a href="/logout">Log out</a></h1></li>
+    </ul>
+</header>
+{% endblock %}
+{% block content %}
+<div class="login">
+    <p>You are logged in as {{ form_data['username'][0] }}.</p>
+</div>
+<!-- {% for key,value in form_data.items() %}
+<h2> {{key}}</h2>
+<p> {{value}}</p>
+{% endfor %}-->
+{% endblock %}
