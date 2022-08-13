@@ -3,8 +3,8 @@ import os
 import json as jsonfiles
 
 app = Flask('KatSit', template_folder='templates', static_folder='static')
-session_filename = os.path.join(app.static_folder, 'data', 'session.json')
-userdata_filename = os.path.join(app.static_folder, 'data', 'userdata.json')
+session_filename = os.path.join('data', 'session.json')
+userdata_filename = os.path.join('data', 'userdata.json')
 
 @app.route('/')
 def index():
